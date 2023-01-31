@@ -4,8 +4,8 @@ y luego mostrarlo por 'Alert' al presionar el botón  'mostrar'*/
 function mostrar()
 {
 	let nombreIngresado;
-	nombreIngresado=txtIdNombre.value;
-	alert("Hola "+nombreIngresado);
+	nombreIngresado=document.getElementById("txtIdNombre");
+	alert("Hola "+nombreIngresado.value);
 
 }
 
