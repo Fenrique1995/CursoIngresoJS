@@ -5,12 +5,11 @@ mostrar el importe con un aumento del 10 %
 en el cuadro de texto "RESULTADO".
 Enrique Santiago Fernandez
 */
-function mostrarAumento()
-{
+function mostrarAumento() {
 	let suledo, resultado;
 	sueldo = parseInt(document.getElementById("txtIdSueldo").value);
 	resultado = parseInt(sueldo * 1.10);
-	document.getElementById("txtIdResultado").value=resultado;
+	document.getElementById("txtIdResultado").value = resultado;
 
-	
+
 }
