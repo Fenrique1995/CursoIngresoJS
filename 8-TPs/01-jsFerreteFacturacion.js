@@ -2,7 +2,7 @@
 A.	Ingresar tres precios de productos y mostrar la suma de los mismos.
 B.	Ingresar tres precios de productos y mostrar el promedio de los mismos.
 C.	ingresar tres precios de productos  y mostrar precio final (más IVA 21%).
-Enriquue Santiago Fernandez
+Enrique Santiago Fernandez
 */
 function Sumar() {
     let precioUno, precioDos, precioTres, suma;
