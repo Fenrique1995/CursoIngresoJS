@@ -6,7 +6,7 @@ function mostrar()
 {
 	//Genero el número RANDOM entre 1 y 10 
 	let random = 0;
-	random = parseInt(Math.random()*10+1);
+	random = parseFloat(Math.random()*10+1).toFixed(2);
 	
 
 	alert("EL NUMERO RANDOM ES: "+random);

@@ -8,8 +8,8 @@ Enrique Santiago Fernandez
 function mostrar() {
 	//Genero el número RANDOM entre 1 y 10 
 	let nota = 0;
-	nota = parseInt(Math.random() * 10 + 1);
-
+	nota = parseFloat(Math.random()*10+1).toFixed(1);
+	
 	if (nota >= 9) {
 		alert(nota+" EXCELENTE");
 	} else if (nota >= 4) {
