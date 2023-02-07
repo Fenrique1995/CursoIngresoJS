@@ -8,7 +8,7 @@ function FahrenheitCentigrados ()
 	let temperatura, celsius;
     temperatura = parseFloat(document.getElementById("txtIdTemperatura").value);
     celsius = (temperatura - 32) / 1.8;
-    alert(temperatura+" Fahrenheit es igual a "+celsius+" Centigrados.");
+    alert(temperatura+" Fahrenheit es igual a "+celsius.toFixed(1)+" Centigrados.");
 }
 
 function CentigradosFahrenheit () 
@@ -16,5 +16,5 @@ function CentigradosFahrenheit ()
 	let temperatura, fahrenheit;
     temperatura = parseFloat(document.getElementById("txtIdTemperatura").value);
     fahrenheit = (temperatura * 1.8) + 32;
-    alert(temperatura+" Centigrados es igual a "+fahrenheit+" Fahrenheit.");
+    alert(temperatura+" Centigrados es igual a "+fahrenheit.toFixed(1)+" Fahrenheit.");
 }
