@@ -9,21 +9,21 @@ function Rectangulo() {
     let ancho, largo, resultado;
     largo = parseFloat(document.getElementById("txtIdLargo").value);
     ancho = parseFloat(document.getElementById("txtIdAncho").value);
-    resultado = parseInt((largo + ancho) * 2);
-    alert("Se necesitan "+resultado+" metros de alambre");
+    resultado = ((largo + ancho) * 2) * 3;
+    alert("Se necesitan " + resultado.toFixed(2) + " metros de alambre");
 }
 function Circulo() {
     let radio, resultado;
     radio = parseFloat(document.getElementById("txtIdRadio").value);
-    resultado = parseFloat(radio * 3);
-    alert(resultado);
+    resultado = Math.PI * radio * 2 * 3;
+    alert("La cantidad de alambre necesaria es: " + resultado.toFixed(2));
 }
 function Materiales() {
     let ancho, largo, cemento, cal, metros;
     largo = parseFloat(document.getElementById("txtIdLargo").value);
     ancho = parseFloat(document.getElementById("txtIdAncho").value);
-    metros = parseInt(largo + ancho);
-    cemento = metros * 2;
-    cal = metros * 3;
-    alert("Se necesitan "+cemento+" bolsas de cementos \n"+" y \n"+cal+" bolsas de cal");
+    metros = largo * ancho;
+    cemento = parseInt(metros * 2);
+    cal = parseInt(metros * 3);
+    alert("Se necesitan " + cemento + " bolsas de cementos \n" + " y \n" + cal + " bolsas de cal");
 }
