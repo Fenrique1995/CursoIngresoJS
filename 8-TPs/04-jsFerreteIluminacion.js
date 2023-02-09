@@ -9,7 +9,7 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
 Enrique Santiago Fernandez
  */
 function CalcularPrecio() {   /*document.getElementById("txtIdprecioDescuento").value*/
-    let lamparas, marca, precioBruto, descuento, precioTotal;
+    let lamparas, marca, precioBruto, descuento, impuesto, precioTotal;
     const PRECIO = 35;
     lamparas = parseInt(document.getElementById("txtIdCantidad").value);
     marca = document.getElementById("Marca").value;
@@ -19,9 +19,9 @@ function CalcularPrecio() {   /*document.getElementById("txtIdprecioDescuento").
         descuento = precioBruto * 0.5;
         precioTotal = precioBruto - descuento;
         if (precioTotal > 120) {
-            descuento = precioBruto * 0.10;
-            precioTotal = precioBruto + descuento;
-            alert("Usted pago $" + descuento + " de IIBB.");
+            impuesto = precioBruto * 0.10;
+            precioTotal += impuesto;
+            alert("Usted pago $" + impuesto + " de IIBB.");
         }
         document.getElementById("txtIdprecioDescuento").value = precioTotal;
     } else {
@@ -37,9 +37,9 @@ function CalcularPrecio() {   /*document.getElementById("txtIdprecioDescuento").
             descuento = precioBruto * 0.3;
             precioTotal = precioBruto - descuento;
             if (precioTotal > 120) {
-                descuento = precioBruto * 0.10;
-                precioTotal = precioBruto + descuento;
-                alert("Usted pago $" + descuento + " de IIBB.");
+                impuesto = precioBruto * 0.10;
+                precioTotal += impuesto;
+                alert("Usted pago $" + impuesto + " de IIBB.");
             }
             document.getElementById("txtIdprecioDescuento").value = precioTotal;
         }
