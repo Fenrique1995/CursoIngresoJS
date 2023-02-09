@@ -21,7 +21,7 @@ function CalcularPrecio() {   /*document.getElementById("txtIdprecioDescuento").
         if (precioTotal > 120) {
             descuento = precioBruto * 0.10;
             precioTotal = precioBruto + descuento;
-            alert("Usted pago $"+descuento+" de IIBB.");
+            alert("Usted pago $" + descuento + " de IIBB.");
         }
         document.getElementById("txtIdprecioDescuento").value = precioTotal;
     } else {
@@ -39,7 +39,7 @@ function CalcularPrecio() {   /*document.getElementById("txtIdprecioDescuento").
             if (precioTotal > 120) {
                 descuento = precioBruto * 0.10;
                 precioTotal = precioBruto + descuento;
-                alert("Usted pago $"+descuento+" de IIBB.");
+                alert("Usted pago $" + descuento + " de IIBB.");
             }
             document.getElementById("txtIdprecioDescuento").value = precioTotal;
         }
@@ -74,8 +74,8 @@ function CalcularPrecio() {   /*document.getElementById("txtIdprecioDescuento").
         }
     }
     if (lamparas <= 2) {
- 
-            precioTotal = precioBruto;
-            document.getElementById("txtIdprecioDescuento").value = precioTotal;
+
+        precioTotal = precioBruto;
+        document.getElementById("txtIdprecioDescuento").value = precioTotal;
     }
 }    
