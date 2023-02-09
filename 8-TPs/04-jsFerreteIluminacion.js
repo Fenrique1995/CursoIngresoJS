@@ -25,57 +25,54 @@ function CalcularPrecio() {   /*document.getElementById("txtIdprecioDescuento").
         }
         document.getElementById("txtIdprecioDescuento").value = precioTotal;
     } else {
-        document.getElementById("txtIdprecioDescuento").value = "Precio con descuento";
-    }
-    //B.	Si compra 5  lamparitas bajo consumo marca "ArgentinaLuz" se hace un descuento del 40 % y si es de otra marca el descuento es del 30%.
-    if (lamparas === 5) {
-        if (marca === "ArgentinaLuz") {
-            descuento = precioBruto * 0.4;
-            precioTotal = precioBruto - descuento;
-            document.getElementById("txtIdprecioDescuento").value = precioTotal;
-        } else {
-            descuento = precioBruto * 0.3;
-            precioTotal = precioBruto - descuento;
-            if (precioTotal > 120) {
-                impuesto = precioBruto * 0.10;
-                precioTotal += impuesto;
-                alert("Usted pago $" + impuesto + " de IIBB.");
+        //B.	Si compra 5  lamparitas bajo consumo marca "ArgentinaLuz" se hace un descuento del 40 % y si es de otra marca el descuento es del 30%.
+        if (lamparas === 5) {
+            if (marca === "ArgentinaLuz") {
+                descuento = precioBruto * 0.4;
+                precioTotal = precioBruto - descuento;
+                document.getElementById("txtIdprecioDescuento").value = precioTotal;
+            } else {
+                descuento = precioBruto * 0.3;
+                precioTotal = precioBruto - descuento;
+                if (precioTotal > 120) {
+                    impuesto = precioBruto * 0.10;
+                    precioTotal += impuesto;
+                    alert("Usted pago $" + impuesto + " de IIBB.");
+                }
+                document.getElementById("txtIdprecioDescuento").value = precioTotal;
             }
-            document.getElementById("txtIdprecioDescuento").value = precioTotal;
-        }
+            //C.	Si compra 4  lamparitas bajo consumo marca "ArgentinaLuz" o “FelipeLamparas” se hace un descuento del 25 % y si es de otra marca el descuento es del 20%.
+        } else if (lamparas === 4) {
+            if (marca === "ArgentinaLuz" || marca === "FelipeLamparas") {
+                descuento = precioBruto * 0.25;
+                precioTotal = precioBruto - descuento;
+                document.getElementById("txtIdprecioDescuento").value = precioTotal;
+            } else {
+                descuento = precioBruto * 0.20;
+                precioTotal = precioBruto - descuento;
+                document.getElementById("txtIdprecioDescuento").value = precioTotal;
+            }
+            //D.	Si compra 3  lamparitas bajo consumo marca "ArgentinaLuz"  el descuento es del 15%, si es  “FelipeLamparas” se hace un descuento del 10 % y si es de otra marca un 5%.       
+        } else if (lamparas === 3) {
+            if (marca === "ArgentinaLuz") {
+                descuento = precioBruto * 0.15;
+                precioTotal = precioBruto - descuento;
+                document.getElementById("txtIdprecioDescuento").value = precioTotal;
+            } else if (marca === "FelipeLamparas") {
+                descuento = precioBruto * 0.10;
+                precioTotal = precioBruto - descuento;
+                document.getElementById("txtIdprecioDescuento").value = precioTotal;
+            } else {
+                descuento = precioBruto * 0.05;
+                precioTotal = precioBruto - descuento;
+                document.getElementById("txtIdprecioDescuento").value = precioTotal;
+            }
+        } else if (lamparas <= 2) {
 
-    }
-    //C.	Si compra 4  lamparitas bajo consumo marca "ArgentinaLuz" o “FelipeLamparas” se hace un descuento del 25 % y si es de otra marca el descuento es del 20%.
-    if (lamparas === 4) {
-        if (marca === "ArgentinaLuz" || marca === "FelipeLamparas") {
-            descuento = precioBruto * 0.25;
-            precioTotal = precioBruto - descuento;
+            precioTotal = precioBruto;
             document.getElementById("txtIdprecioDescuento").value = precioTotal;
         } else {
-            descuento = precioBruto * 0.20;
-            precioTotal = precioBruto - descuento;
-            document.getElementById("txtIdprecioDescuento").value = precioTotal;
+            document.getElementById("txtIdprecioDescuento").value = "Precio con descuento";
         }
     }
-    //D.	Si compra 3  lamparitas bajo consumo marca "ArgentinaLuz"  el descuento es del 15%, si es  “FelipeLamparas” se hace un descuento del 10 % y si es de otra marca un 5%.
-    if (lamparas === 3) {
-        if (marca === "ArgentinaLuz") {
-            descuento = precioBruto * 0.15;
-            precioTotal = precioBruto - descuento;
-            document.getElementById("txtIdprecioDescuento").value = precioTotal;
-        } else if (marca === "FelipeLamparas") {
-            descuento = precioBruto * 0.10;
-            precioTotal = precioBruto - descuento;
-            document.getElementById("txtIdprecioDescuento").value = precioTotal;
-        } else {
-            descuento = precioBruto * 0.05;
-            precioTotal = precioBruto - descuento;
-            document.getElementById("txtIdprecioDescuento").value = precioTotal;
-        }
-    }
-    if (lamparas <= 2) {
-
-        precioTotal = precioBruto;
-        document.getElementById("txtIdprecioDescuento").value = precioTotal;
-    }
-}    
+}
