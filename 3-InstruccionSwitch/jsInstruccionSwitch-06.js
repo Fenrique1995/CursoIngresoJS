@@ -23,7 +23,7 @@ function mostrar() {
 			}
 			break;
 		default:
-			("la hora no existe.");
+			alert("la hora no existe.");
 			break;
 	}
 }//FIN DE LA FUNCIÓN
