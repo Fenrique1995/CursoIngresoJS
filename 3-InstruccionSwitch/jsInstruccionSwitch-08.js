@@ -14,9 +14,6 @@ function mostrar() {
 		case "Ushuaia":
 			alert("En este destino hace frio");
 			break;
-
-		default:
-			break;
 	}
 
 }//FIN DE LA FUNCIÓN

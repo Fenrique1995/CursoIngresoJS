@@ -28,8 +28,6 @@ function mostrar() {
 		case "Noviempre":
 		case "Diciembre":
 			alert("Ya pasamos el frio, ahora calor!!!.");
-		default:
-			break;
 	}
 
 

@@ -19,9 +19,6 @@ function mostrar() {
 		case "Ushuaia":
 			alert("Este destino se encuentra en el Sur de nuestro pais");
 			break;
-
-		default:
-			break;
 	}
 
 }//FIN DE LA FUNCIÓN
