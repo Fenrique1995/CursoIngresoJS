@@ -13,7 +13,7 @@ function mostrar() {
 	const PRECIO = 15000;
 	destinoIngresado = document.getElementById("txtIdDestino").value;
 	estacionIngresada = document.getElementById("txtIdEstacion").value;
-
+	/* ejemplo
 	switch (estacionIngresada) {
 		case "Invierno":
 			if (destinoIngresado === "Bariloche") {
@@ -56,6 +56,61 @@ function mostrar() {
 			}
 			break;
 	}
+*/
 
+	switch (estacionIngresada) {
+		case "Invierno":
+			switch (destinoIngresado) {
+				case "Bariloche":
+					aumento = PRECIO * 0.2;
+					precioTotal = PRECIO + aumento;
+					alert(precioTotal);
+					break;
+				case "Cataratas":
+				case "Cordoba":
+					descuento = PRECIO * 0.1;
+					precioTotal = PRECIO - descuento;
+					alert(precioTotal);
+					break;
+				case "Mar del plata":
+					descuento = PRECIO * 0.2;
+					precioTotal = PRECIO - descuento;
+					alert(precioTotal);
+					break;
+			}
+			break;
+		case "Otoño":
+		case "Primavera":
+			switch (destinoIngresado) {
+				case "Cordoba":
+					alert(PRECIO);
+					break;
+				default:
+					aumento = PRECIO * 0.1;
+					precioTotal = PRECIO + aumento;
+					alert(precioTotal);
+					break;
+			}
+			break;
+		case "Verano":
+			switch (destinoIngresado) {
+				case "Mar del plata":
+					aumento = PRECIO * 0.2;
+					precioTotal = PRECIO + aumento;
+					alert(precioTotal);
+					break;
+				case "Cataratas":
+				case "Cordoba":
+					aumento = PRECIO * 0.1;
+					precioTotal = PRECIO + aumento;
+					alert(precioTotal);
+					break;
+				case "Bariloche":
+					descuento = PRECIO * 0.2;
+					precioTotal = PRECIO - descuento;
+					alert(precioTotal);
+			}
+			break;
+	}
 
 }//FIN DE LA FUNCIÓN
