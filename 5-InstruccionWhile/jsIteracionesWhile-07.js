@@ -1,18 +1,26 @@
 /*
 Al presionar el botón pedir  números  hasta que el USUARIO QUIERA 
 e informar la suma acumulada y el promedio.
+Enrique Santiago Fernandez
 */
-function mostrar()
-{
-	var contador;
-	var acumulador;
-	var respuesta;
-	contador=0;
-	acumulador=0;
-	respuesta='si';
+function mostrar() {
+	let counter;
+	let sum;
+	let answer;
+	let num;
+	counter = 0;
+	sum = 0;
+	answer = "si";
+
+	while (answer != "no") {
+		counter++;
+		num = parseInt(prompt("ingrese un numero:"));
+		sum += num;
+		answer = prompt("Desea continuar? ");
+	}
 
 
-	txtIdSuma.value=acumulador;
-	txtIdPromedio.value=acumulador/contador;
+	document.getElementById("txtIdSuma").value = sum;
+	document.getElementById("txtIdPromedio").value = sum / counter;
 
 }//FIN DE LA FUNCIÓN
