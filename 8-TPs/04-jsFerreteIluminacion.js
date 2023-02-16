@@ -14,6 +14,7 @@ function CalcularPrecio() {   /*document.getElementById("txtIdprecioDescuento").
     lamparas = parseInt(document.getElementById("txtIdCantidad").value);
     marca = document.getElementById("Marca").value;
     precioBruto = lamparas * PRECIO;
+    /*
     //A.	Si compra 6 o más  lamparitas bajo consumo tiene un descuento del 50%.
     if (lamparas >= 6) {
         descuento = precioBruto * 0.5;
@@ -75,4 +76,5 @@ function CalcularPrecio() {   /*document.getElementById("txtIdprecioDescuento").
             document.getElementById("txtIdprecioDescuento").value = "Precio con descuento";
         }
     }
+    */
 }
