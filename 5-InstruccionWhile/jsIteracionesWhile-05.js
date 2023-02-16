@@ -1,12 +1,16 @@
 /*
 Al presionar el botón pedir un sexo
-'f' para femenino, 'm' para masculino.*/
+'f' para femenino, 'm' para masculino.
+Enrique Santiago Fernandez
+*/
 function mostrar()
 {
-	var sexoIngresado;
-	sexoIngresado = prompt("ingrese f ó m .");
+	let sex;
+	sex = prompt("ingrese f ó m .");
+	while (sex != 'f' && sex != 'm') {
+		sex = prompt("debe ingresar f ó m .");
+	}
 
 
-
-	txtIdSexo.value=sexoIngresado;
+	document.getElementById("txtIdSexo").value=sex;
 }//FIN DE LA FUNCIÓN
