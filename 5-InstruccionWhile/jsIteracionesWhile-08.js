@@ -1,19 +1,33 @@
 /*
 Al presionar el botón pedir  números  hasta que el usuario quiera,
-sumar los que son positivos y multiplicar los negativos.*/
+sumar los que son positivos y multiplicar los negativos.
+Enrique Santiago Fernandez
+*/
 function mostrar()
 {
-	var contador;
-	var respuesta;
-	var sumaPositivos;
-	var multiplicacionNegativos;
-	contador=0;
-	sumaPositivos=0;
-	multiplicacionNegativos=1;
-	respuesta='si';
+	let num;
+	let answer;
+	let sumPositives;
+	let plusNegatives;
+	let counter;
+	counter=0;
+	sumPositives=0;
+	plusNegatives=0;
+	answer='si';
+
+	while (answer != "no") {
+		counter++;
+		num = parseInt(prompt("Ingrese un numero:"));
+		if (num < 0) {
+			plusNegatives += num;
+		}else if (num > 0) {
+			sumPositives += num
+		}
+		answer = prompt("Desea continuar: ");
+	}
 
 
-	txtIdSuma.value=sumaPositivos;
-	txtIdProducto.value=multiplicacionNegativos;
+	document.getElementById("txtIdSuma").value=sumPositives;
+	document.getElementById("txtIdProducto").value=plusNegatives*= counter;
 
 }//FIN DE LA FUNCIÓN

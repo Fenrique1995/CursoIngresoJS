@@ -3,8 +3,7 @@ Al presionar el botón pedir un sexo
 'f' para femenino, 'm' para masculino.
 Enrique Santiago Fernandez
 */
-function mostrar()
-{
+function mostrar() {
 	let sex;
 	sex = prompt("ingrese f ó m .");
 	while (sex != 'f' && sex != 'm') {
@@ -12,5 +11,5 @@ function mostrar()
 	}
 
 
-	document.getElementById("txtIdSexo").value=sex;
+	document.getElementById("txtIdSexo").value = sex;
 }//FIN DE LA FUNCIÓN
