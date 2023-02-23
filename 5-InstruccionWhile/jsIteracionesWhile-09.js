@@ -10,22 +10,22 @@ function mostrar() {	// declarar variables
 	let numeroMinimo;
 	let respuesta;
 	//iniciar variables
-	banderaDelPrimero = 0;
+	banderaDelPrimero = true;
 	respuesta = 'si';
 	while (respuesta == "si") {
-		banderaDelPrimero++;
 		numeroIngresado = parseInt(prompt("Ingrese un numero: "));
 
-		if(banderaDelPrimero == 1)       {
+		if(banderaDelPrimero === true)       {
 			numeroMaximo = numeroIngresado;
 			numeroMinimo = numeroIngresado;
+			banderaDelPrimero = false;
 		}
 
-		if (banderaDelPrimero > 1 && numeroIngresado > numeroMaximo) {
+		if (banderaDelPrimero === false && numeroIngresado > numeroMaximo) {
 			numeroMaximo = numeroIngresado;
 		}
 
-		if (banderaDelPrimero > 1 && numeroIngresado < numeroMinimo) {
+		if (banderaDelPrimero === false && numeroIngresado < numeroMinimo) {
 			numeroMinimo = numeroIngresado;
 		}
 		respuesta = prompt("desea continuar?");
