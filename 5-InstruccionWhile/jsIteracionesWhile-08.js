@@ -18,18 +18,23 @@ function mostrar() {
 
 	while (answer != "no") {
 		num = parseInt(prompt("Ingrese un numero:"));
+
+
 		if (num >= 0) {
 			sumPositives += num;
+			
 		} else {
-			flag= false;
+			
 			plusNegatives *= num;
+			flag = false;
 		}
-		if(flag===true){
-			plusNegatives = 0;
-		}
-		answer = prompt("Desea continuar: ");
-	}
 
+		answer = prompt("Desea continuar: ");
+		
+	}
+	if (flag == true) {
+		plusNegatives = 0;
+	}
 
 	document.getElementById("txtIdSuma").value = sumPositives;
 	document.getElementById("txtIdProducto").value = plusNegatives;
