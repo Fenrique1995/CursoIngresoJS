@@ -8,16 +8,24 @@ function mostrar() {
 	let answer;
 	let sumPositives;
 	let plusNegatives;
+	let flag;
+
+	flag = true;
+
 	sumPositives = 0;
 	plusNegatives = 1;
 	answer = 'si';
 
 	while (answer != "no") {
 		num = parseInt(prompt("Ingrese un numero:"));
-		if (num < 0) {
+		if (num >= 0) {
+			sumPositives += num;
+		} else {
+			flag= false;
 			plusNegatives *= num;
-		} else if (num > 0) {
-			sumPositives += num
+		}
+		if(flag===true){
+			plusNegatives = 0;
 		}
 		answer = prompt("Desea continuar: ");
 	}
