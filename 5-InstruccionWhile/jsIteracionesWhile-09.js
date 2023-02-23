@@ -15,20 +15,22 @@ function mostrar() {	// declarar variables
 	while (respuesta == "si") {
 		numeroIngresado = parseInt(prompt("Ingrese un numero: "));
 
-		if(banderaDelPrimero === true)       {
+		respuesta = prompt("Desea continuar? :")
+		if (banderaDelPrimero === true) {
 			numeroMaximo = numeroIngresado;
 			numeroMinimo = numeroIngresado;
 			banderaDelPrimero = false;
 		}
 
-		if (banderaDelPrimero === false && numeroIngresado > numeroMaximo) {
-			numeroMaximo = numeroIngresado;
+		if (banderaDelPrimero === false) {
+			if (numeroIngresado > numeroMaximo) {
+				numeroMaximo = numeroIngresado;
+			} else if (numeroIngresado < numeroMinimo) {
+				numeroMinimo = numeroIngresado;
+			}
+
 		}
 
-		if (banderaDelPrimero === false && numeroIngresado < numeroMinimo) {
-			numeroMinimo = numeroIngresado;
-		}
-		respuesta = prompt("desea continuar?");
 	}
 	document.getElementById("txtIdMaximo").value = numeroMaximo;
 	document.getElementById("txtIdMinimo").value = numeroMinimo;
